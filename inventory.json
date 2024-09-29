@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Cup",
+    "id": "1",
+    "images": [
+      "cup.jpg"
+    ],
+    "price": 2000,
+    "description": "A small tea cup"
+  },
+  {
+    "name": "Cup",
+    "id": "2",
+    "images": [
+      "greep-cup.jpg"
+    ],
+    "price": 2500,
+    "description": "A cup"
+  },
+  {
+    "name": "Cup",
+    "id": "3",
+    "images": [
+      "PXL_20240912_221023373.jpg",
+      "PXL_20240912_221025273.jpg"
+    ],
+    "price": 2500,
+    "description": "A cup"
+  },
+  {
+    "id": "elephant",
+    "images": [
+      "PXL_20240811_174836912.jpg",
+      "PXL_20240811_174841112.jpg",
+      "PXL_20240811_174843717.jpg",
+      "PXL_20240811_174847125.jpg"
+    ]
+  },
+  {
+    "id": "mini-moon",
+    "images": [
+      "PXL_20240713_175737830.jpg",
+      "PXL_20240713_175739054.jpg",
+      "PXL_20240713_175746022.jpg"
+    ]
+  },
+  {
+    "name": "Rice Bowl",
+    "description": "A rice bowl",
+    "price": 2000,
+    "id": "rice-bowl",
+    "images": [
+      "PXL_20240912_220953308.jpg",
+      "PXL_20240912_220958991.jpg",
+      "PXL_20240912_221002649.jpg"
+    ]
+  },
+  {
+    "id": "sake-cup",
+    "name": "Sake Cup",
+    "description": "A small blue sake cup",
+    "price": 2000,
+    "images": [
+      "PXL_20240504_182509443.jpg",
+      "PXL_20240504_182511522.jpg"
+    ]
+  },
+  {
+    "id": "two-cups",
+    "images": [
+      "PXL_20240504_182540295.jpg",
+      "PXL_20240504_182542409.jpg",
+      "PXL_20240504_182548724.jpg"
+    ]
+  },
+  {
+    "name": "Double Vase",
+    "description": "A vase made from two parts",
+    "id": "vase",
+    "price": 6500,
+    "images": [
+      "PXL_20240830_170130224.jpg",
+      "PXL_20240830_170136244.jpg"
+    ]
+  }
+]
