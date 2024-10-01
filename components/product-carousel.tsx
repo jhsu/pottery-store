@@ -54,19 +54,21 @@ export function ProductCarouselComponent({ products }: ProductCarouselProps) {
   const hasMultipleImages = products.length > 1
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto p-4">
-      <div className="relative flex-1">
-        <Image
-          src={products[currentImageIndex].src}
-          alt={products[currentImageIndex].alt}
-          width={400}
-          height={600}
-          className="w-full h-auto object-cover rounded-lg"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg" />
-        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-          <h2 className="text-2xl font-bold mb-2">{products[currentImageIndex].name}</h2>
-          <p className="text-sm">{products[currentImageIndex].caption}</p>
+    <div className="flex flex-col gap-4 max-w-4xl mx-auto p-4">
+      <div className="relative">
+        <div className="relative">
+          <Image
+            src={products[currentImageIndex].src}
+            alt={products[currentImageIndex].alt}
+            width={400}
+            height={600}
+            className="w-full h-auto object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg" />
+          <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <h2 className="text-2xl font-bold mb-2">{products[currentImageIndex].name}</h2>
+            <p className="text-sm">{products[currentImageIndex].caption}</p>
+          </div>
         </div>
         {hasMultipleImages && (
           <>
@@ -88,21 +90,15 @@ export function ProductCarouselComponent({ products }: ProductCarouselProps) {
         )}
       </div>
       {hasMultipleImages && (
-        <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-y-auto md:max-h-[600px]">
-          {thumbnailImages.map((product, index) => (
+        <div className="flex justify-center gap-2 mt-4">
+          {products.map((product, index) => (
             <button
               key={product.id}
-              onClick={() => setCurrentImageIndex((currentImageIndex + index + 1) % products.length)}
-              className="flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
-            >
-              <Image
-                src={product.src}
-                alt={product.alt}
-                width={100}
-                height={150}
-                className="w-20 h-30 object-cover rounded-md hover:opacity-75 transition-opacity"
-              />
-            </button>
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-3 h-3 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 ${index === currentImageIndex ? 'bg-blue-500' : 'bg-gray-300'
+                }`}
+              aria-label={`View image ${index + 1}`}
+            />
           ))}
         </div>
       )}
